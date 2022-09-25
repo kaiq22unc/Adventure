@@ -6,9 +6,8 @@ import java.util.List;
 
 public class InventoryImpl implements Inventory{
 
-    private ArrayList<Item> list = new ArrayList<Item>();
+    private final ArrayList<Item> list = new ArrayList<Item>();
     public InventoryImpl(){
-        this.list = list;
     }
 
     public boolean isEmpty(){
