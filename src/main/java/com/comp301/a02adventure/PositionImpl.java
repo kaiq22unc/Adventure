@@ -1,6 +1,5 @@
 package com.comp301.a02adventure;
 
-import jdk.internal.net.http.common.Pair;
 
 public class PositionImpl implements Position{
 
