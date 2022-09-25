@@ -19,25 +19,20 @@ public class PositionImpl implements Position{
     }
 
     public Position getNeighbor(Direction direction) {
-        int nx = 0;
-        int ny = 0;
-        Position p = new PositionImpl(nx, ny);
-        switch(direction){
+
+        Position p = null;
+        switch (direction) {
             case NORTH:
-                nx = x;
-                ny = y + 1;
+                p = new PositionImpl(x, y + 1);
                 break;
             case SOUTH:
-                nx = x;
-                ny = y - 1;
+                p = new PositionImpl(x, y - 1);
                 break;
             case EAST:
-                nx = x + 1;
-                ny = y;
+                p = new PositionImpl(x + 1, y);
                 break;
             case WEST:
-                nx = x - 1;
-                ny = y;
+                p = new PositionImpl(x - 1, y);
                 break;
         }
         return p;

@@ -25,7 +25,7 @@ public class InventoryImpl implements Inventory{
     }
 
     public List<Item> getItems(){
-        ArrayList clone = new ArrayList<Item>();
+        List<Item> clone = new ArrayList<>();
         clone = (ArrayList) list.clone();
         return clone;
     }
