@@ -6,7 +6,7 @@ import java.util.List;
 
 public class InventoryImpl implements Inventory{
 
-    private ArrayList<Item> list;
+    private List<Item> list;
     public InventoryImpl(){
         this.list = new ArrayList<Item>();
     }
@@ -32,8 +32,7 @@ public class InventoryImpl implements Inventory{
     }
 
     public List<Item> getItems(){
-        List<Item> clone = new ArrayList<>();
-        clone = (ArrayList) list.clone();
+        List<Item> clone = new ArrayList<>(list);
         return clone;
     }
 
