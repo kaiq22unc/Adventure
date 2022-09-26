@@ -63,13 +63,14 @@ public class GameImpl implements Game{
         if(neiP.getY()<0||neiP.getX()<0){
             return false;
         }
-        if(map.getCell(neiP) == null){
-            return false;
-        }
         if(neiP.getX() > map.getWidth() || neiP.getY() > map.getHeight()){
             return false;
         }else{
+            if(map.getCell(neiP) == null){
+                return false;
+            }else{
             return true;
+            }
         }
     }
 
