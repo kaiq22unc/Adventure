@@ -18,11 +18,7 @@ public class ItemImpl implements Item{
     @Override
     public boolean equals(Object obj) {
         if(obj == null){return false;}
-        if(obj.toString().equals(name)){
-            return true;
-        }else{
-            return false;
-        }
+        return obj.toString().equals(name);
     }
 
     @Override

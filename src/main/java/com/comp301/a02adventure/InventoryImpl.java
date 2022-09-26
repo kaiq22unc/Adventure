@@ -6,7 +6,7 @@ import java.util.List;
 
 public class InventoryImpl implements Inventory{
 
-    private List<Item> l1;
+    private final List<Item> l1;
     public InventoryImpl(){
         this.l1 = new ArrayList<Item>();
     }

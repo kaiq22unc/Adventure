@@ -3,8 +3,8 @@ package com.comp301.a02adventure;
 public class PlayerImpl implements Player{
 
     private final String name;
-    private Position p;
     private final Inventory inv;
+    private Position p;
     public PlayerImpl(String name, int startX, int startY){
         this.name = name;
         p = new PositionImpl(startX, startY);

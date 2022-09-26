@@ -4,8 +4,8 @@ import java.util.List;
 
 public class GameImpl implements Game{
 
-    private Map map;
-    private Player player;
+    private final Map map;
+    private final Player player;
 
     public GameImpl(Map map, Player player) {
         this.map = map;
@@ -65,11 +65,7 @@ public class GameImpl implements Game{
         }else if(neiP.getX() > map.getWidth() || neiP.getY() > map.getHeight()){
             return false;
         }else{
-            if(map.getCell(neiP) == null){
-                return false;
-            }else{
-            return true;
-            }
+            return map.getCell(neiP) != null;
         }
     }
 
