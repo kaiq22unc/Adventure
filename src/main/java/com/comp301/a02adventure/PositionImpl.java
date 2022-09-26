@@ -18,6 +18,7 @@ public class PositionImpl implements Position{
         return y;
     }
 
+
     public Position getNeighbor(Direction direction) {
 
         Position p = null;

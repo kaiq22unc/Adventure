@@ -49,6 +49,7 @@ public class InventoryImpl implements Inventory{
         }
     }
 
+
     public void transferFrom(Inventory other){
         if(!other.isEmpty()){
             l1.addAll(other.getItems());

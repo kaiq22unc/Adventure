@@ -40,6 +40,7 @@ public class CellImpl implements Cell{
         return description;
     }
 
+
     public Position getPosition() {
         return p;
     }

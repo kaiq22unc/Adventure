@@ -16,6 +16,7 @@ public class MapImpl implements Map{
         }
     }
 
+
     public int getWidth() {
         return width;
     }

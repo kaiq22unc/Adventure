@@ -67,6 +67,7 @@ public class GameImpl implements Game{
         }
     }
 
+
     public void move(Direction direction) {
         if(!this.canMove(direction)){
             System.out.println("You can't go that way! Try another direction.");

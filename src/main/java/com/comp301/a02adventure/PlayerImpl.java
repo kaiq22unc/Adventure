@@ -20,6 +20,7 @@ public class PlayerImpl implements Player{
         return inv;
     }
 
+
     public String getName() {
         return name;
     }
