@@ -3,9 +3,9 @@ package com.comp301.a02adventure;
 public class MapImpl implements Map{
 
     private Cell[][] grid;
-    private final int width;
-    private final int height;
-    private final int numItems;
+    private int width;
+    private int height;
+    private int numItems;
 
     public MapImpl(int width, int height, int numItems){
         this.width = width;
