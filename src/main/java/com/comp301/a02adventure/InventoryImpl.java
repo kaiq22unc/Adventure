@@ -12,28 +12,22 @@ public class InventoryImpl implements Inventory{
     }
 
     public boolean isEmpty(){
-        boolean res = true;
-        if(list != null){
-            res = false;
-        }else{
-            res = false;
-        }
-        return res;
+        return list == null;
     }
 
     public int getNumItems(){
-        int num = 0;
+        /*int num = 0;
         for (Item item : list) {
             if (item != null) {
                 num++;
             }
         }
-        return num;
+        return num;*/
+        return list.size();
     }
 
     public List<Item> getItems(){
-        List<Item> clone = new ArrayList<>(list);
-        return clone;
+        return new ArrayList<>(list);
     }
 
     public void addItem(Item item){
