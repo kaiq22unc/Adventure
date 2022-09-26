@@ -49,7 +49,7 @@ public class GameImpl implements Game{
         if(!c.hasChest()){
             System.out.println("No chest to open, sorry!");
         }else{
-            if(c.getChest() == null){
+            if(c.getChest().isEmpty()){
                 System.out.println("The chest is empty.");
             }else{
                 System.out.println("You collected these items: " + c.getChest().getItems());
