@@ -3,8 +3,8 @@ package com.comp301.a02adventure;
 
 public class PositionImpl implements Position{
 
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
     public PositionImpl(int x, int y){
         this.x = x;
         this.y = y;

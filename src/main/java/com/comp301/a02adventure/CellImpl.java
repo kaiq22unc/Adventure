@@ -2,7 +2,7 @@ package com.comp301.a02adventure;
 
 public class CellImpl implements Cell{
 
-    private Position p;
+    private final Position p;
     private String name;
     private String description;
     private Inventory chest;
@@ -25,36 +25,8 @@ public class CellImpl implements Cell{
         this.description = "";
     }
 
-    public void setChest(Inventory inv){
-        this.chest = inv;
-        if(inv == null){
-            throw new IllegalArgumentException();
-        }
-    }
-
     public String getName() {
         return name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-
-    public Position getPosition() {
-        return p;
-    }
-
-    public Inventory getChest(){
-        return chest;
-    }
-
-    public boolean getIsVisited() {
-        return flag;
-    }
-
-    public boolean hasChest() {
-        return chest != null;
     }
 
     public void setName(String name) {
@@ -64,11 +36,38 @@ public class CellImpl implements Cell{
         }
     }
 
+    public String getDescription() {
+        return description;
+    }
+
     public void setDescription(String description) {
         this.description = description;
         if(description == null){
             throw new IllegalArgumentException();
         }
+    }
+
+    public Position getPosition() {
+        return p;
+    }
+
+    public Inventory getChest(){
+        return chest;
+    }
+
+    public void setChest(Inventory inv){
+        this.chest = inv;
+        if(inv == null){
+            throw new IllegalArgumentException();
+        }
+    }
+
+    public boolean getIsVisited() {
+        return flag;
+    }
+
+    public boolean hasChest() {
+        return chest != null;
     }
 
     public void visit(){
