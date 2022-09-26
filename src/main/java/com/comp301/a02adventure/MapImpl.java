@@ -17,7 +17,7 @@ public class MapImpl implements Map{
                 grid[i][j] = null;
             }
         }
-        if(width < 1 || height < 1){
+        if(width <= 0 || height <= 0){
             throw new IllegalArgumentException();
         }
     }
