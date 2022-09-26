@@ -2,7 +2,7 @@ package com.comp301.a02adventure;
 
 public class MapImpl implements Map{
 
-    private final Cell[][] grid;
+    private Cell[][] grid;
     private final int width;
     private final int height;
     private final int numItems;
