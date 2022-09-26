@@ -6,13 +6,13 @@ import java.util.List;
 
 public class InventoryImpl implements Inventory{
 
-    private List<Item> list;
+    private List<Item> l1;
     public InventoryImpl(){
-        this.list = new ArrayList<Item>();
+        this.l1 = new ArrayList<Item>();
     }
 
     public boolean isEmpty(){
-        return list == null;
+        return l1 == null;
     }
 
     public int getNumItems(){
@@ -23,27 +23,28 @@ public class InventoryImpl implements Inventory{
             }
         }
         return num;*/
-        return list.size();
+        return l1.size();
     }
 
     public List<Item> getItems(){
-        return new ArrayList<>(list);
+        List<Item> nl1 = new ArrayList<Item>(l1);
+        return nl1;
     }
 
     public void addItem(Item item){
-        list.add(item);
+        l1.add(item);
     }
 
     public void removeItem(Item item){
-        list.remove(item);
+        l1.remove(item);
     }
 
     public void clear(){
-        list.clear();
+        l1.clear();
     }
 
     public void transferFrom(Inventory other){
-        list.addAll(other.getItems());
+        l1.addAll(other.getItems());
         other.clear();
     }
 
