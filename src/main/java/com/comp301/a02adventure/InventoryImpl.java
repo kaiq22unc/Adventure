@@ -44,14 +44,14 @@ public class InventoryImpl implements Inventory{
     }
 
     public void clear(){
-        if(!l1.isEmpty()){
+        if(l1 != null){
             l1.clear();
         }
     }
 
 
     public void transferFrom(Inventory other){
-        if(!other.isEmpty()){
+        if(other != null){
             l1.addAll(other.getItems());
             other.clear();
             }
