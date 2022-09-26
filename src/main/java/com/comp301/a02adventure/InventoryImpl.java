@@ -47,6 +47,7 @@ public class InventoryImpl implements Inventory{
         }
     }
 
+
     public void clear(){
         if(l1 != null){
             l1.clear();
