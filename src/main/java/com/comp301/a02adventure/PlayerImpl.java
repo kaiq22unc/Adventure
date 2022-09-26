@@ -9,6 +9,7 @@ public class PlayerImpl implements Player{
         this.name = name;
         p = new PositionImpl(startX, startY);
         if(name == null){throw new IllegalArgumentException();}
+        inv = new InventoryImpl();
     }
 
     public Position getPosition() {

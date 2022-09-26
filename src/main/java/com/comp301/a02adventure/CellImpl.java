@@ -27,6 +27,9 @@ public class CellImpl implements Cell{
 
     public void setChest(Inventory inv){
         this.chest = inv;
+        if(inv == null){
+            throw new IllegalArgumentException();
+        }
     }
 
     public String getName() {
@@ -55,10 +58,16 @@ public class CellImpl implements Cell{
 
     public void setName(String name) {
         this.name = name;
+        if(name == null){
+            throw new IllegalArgumentException();
+        }
     }
 
     public void setDescription(String description) {
         this.description = description;
+        if(description == null){
+            throw new IllegalArgumentException();
+        }
     }
 
     public void visit(){
