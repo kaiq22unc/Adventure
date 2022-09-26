@@ -62,7 +62,7 @@ public class GameImpl implements Game{
         Position neiP = player.getPosition().getNeighbor(direction);
         if(neiP.getY()<=0||neiP.getX()<=0){
             return false;
-        }else if(neiP.getX() >= map.getWidth() || neiP.getY() >= map.getHeight()){
+        }else if(neiP.getX() > map.getWidth() || neiP.getY() > map.getHeight()){
             return false;
         }else{
             return map.getCell(neiP) != null;
