@@ -6,6 +6,7 @@ public class MapImpl implements Map{
     private final int width;
     private final int height;
     private final int numItems;
+
     public MapImpl(int width, int height, int numItems){
         this.width = width;
         this.height = height;
@@ -15,7 +16,6 @@ public class MapImpl implements Map{
             throw new IllegalArgumentException();
         }
     }
-
 
     public int getWidth() {
         return width;

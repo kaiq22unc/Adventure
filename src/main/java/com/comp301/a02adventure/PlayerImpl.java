@@ -2,9 +2,9 @@ package com.comp301.a02adventure;
 
 public class PlayerImpl implements Player{
 
-    private String name;
+    private final String name;
     private Position p;
-    private Inventory inv;
+    private final Inventory inv;
     public PlayerImpl(String name, int startX, int startY){
         this.name = name;
         p = new PositionImpl(startX, startY);
