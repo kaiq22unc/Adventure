@@ -12,18 +12,22 @@ public class InventoryImpl implements Inventory{
     }
 
     public boolean isEmpty(){
-        return l1 == null;
+        for(Item item: l1){
+            if(item != null){
+                return false;
+            }
+        }
+        return true;
     }
 
     public int getNumItems(){
-        /*int num = 0;
-        for (Item item : list) {
-            if (item != null) {
+        int num = 0;
+        for(Item item: l1){
+            if(item!=null){
                 num++;
             }
         }
-        return num;*/
-        return l1.size();
+        return num;
     }
 
     public List<Item> getItems(){
