@@ -11,7 +11,7 @@ public class MapImpl implements Map{
         this.width = width;
         this.height = height;
         this.numItems = numItems;
-        this.grid = new Cell[100][100];
+        this.grid = new Cell[1000][1000];
         if(width <= 0 || height <= 0){
             throw new IllegalArgumentException();
         }
