@@ -12,7 +12,13 @@ public class InventoryImpl implements Inventory{
     }
 
     public boolean isEmpty(){
-        return list == null;
+        boolean res = true;
+        if(list != null){
+            res = false;
+        }else{
+            res = false;
+        }
+        return res;
     }
 
     public int getNumItems(){
