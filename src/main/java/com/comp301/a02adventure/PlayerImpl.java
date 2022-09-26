@@ -1,6 +1,6 @@
 package com.comp301.a02adventure;
 
-public class PlayerImpl {
+public class PlayerImpl implements Player{
 
     private String name;
     private Position p;
@@ -9,6 +9,18 @@ public class PlayerImpl {
         this.name = name;
         p = new PositionImpl(startX, startY);
         if(name == null){throw new IllegalArgumentException();}
+    }
+
+    public Position getPosition() {
+        return p;
+    }
+
+    public Inventory getInventory() {
+        return inv;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void move(Direction direction){

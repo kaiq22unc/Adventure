@@ -1,6 +1,6 @@
 package com.comp301.a02adventure;
 
-public class CellImpl {
+public class CellImpl implements Cell{
 
     private Position p;
     private String name;
@@ -29,8 +29,36 @@ public class CellImpl {
         this.chest = inv;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Position getPosition() {
+        return p;
+    }
+
     public Inventory getChest(){
         return chest;
+    }
+
+    public boolean getIsVisited() {
+        return flag;
+    }
+
+    public boolean hasChest() {
+        return chest != null;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public void visit(){
