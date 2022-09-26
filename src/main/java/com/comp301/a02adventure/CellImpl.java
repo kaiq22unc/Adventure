@@ -10,7 +10,7 @@ public class CellImpl implements Cell{
 
     public CellImpl(int x, int y, String name, String description){
         this.flag = false;
-        Position p = new PositionImpl(x,y);
+        this.p = new PositionImpl(x,y);
         this.name = name;
         this.description = description;
         if(name == null || description == null){
@@ -20,7 +20,7 @@ public class CellImpl implements Cell{
 
     public CellImpl(int x, int y){
         this.flag = false;
-        Position p = new PositionImpl(x,y);
+        this.p = new PositionImpl(x,y);
         this.name = "";
         this.description = "";
     }
