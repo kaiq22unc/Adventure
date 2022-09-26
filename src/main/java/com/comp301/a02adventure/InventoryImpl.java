@@ -32,20 +32,28 @@ public class InventoryImpl implements Inventory{
     }
 
     public void addItem(Item item){
-        l1.add(item);
+        if(item != null){
+            l1.add(item);
+            }
     }
 
     public void removeItem(Item item){
-        l1.remove(item);
+        if(item != null){
+            l1.remove(item);
+        }
     }
 
     public void clear(){
-        l1.clear();
+        if(!l1.isEmpty()){
+            l1.clear();
+        }
     }
 
     public void transferFrom(Inventory other){
-        l1.addAll(other.getItems());
-        other.clear();
+        if(!other.isEmpty()){
+            l1.addAll(other.getItems());
+            other.clear();
+            }
     }
 
 
